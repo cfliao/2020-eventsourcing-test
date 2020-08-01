@@ -18,15 +18,17 @@ const CustomerModel = model('Customer', CustomerSchema);
 
 connection.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
-connection.once('open', function () {
+// connection.once('open', function () {
+//
+//     const customer1 = new CustomerModel({id: '123', name: 'john'});
+//     customer1.save(err => {
+//         if (err) throw err;
+//         console.log('saved.');
+//         connection.close();
+//     });
+//
+// });
 
-    const customer1 = new CustomerModel({id: '123', name: 'john'});
-    customer1.save(err => {
-        if (err) throw err;
-        console.log('saved.');
-        connection.close();
-    });
 
-});
 
 
