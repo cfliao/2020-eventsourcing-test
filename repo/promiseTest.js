@@ -18,13 +18,10 @@ const CustomerSchema = new mongo.Schema({
 (async () => {
     let connection;
     try {
-        connection = dbConnection();
+        connection = await dbConnection();
         const CustomerModel = connection.model('Customer', CustomerSchema);
         const customer1 = new CustomerModel({id: '123', name: 'john'});
-        customer1.save(err => {
-            if (err) throw err;
-            console.log('saved.');
-        });
+        await customer1.save();
     } finally {
         connection.close();
     }
