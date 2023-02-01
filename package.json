@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "dependencies": {
     "mongodb": "^3.5.9",
-    "mongoose": "^5.9.26",
+    "mongoose": "^5.13.15",
     "uuid": "^8.3.0",
     "mqtt": "^4.1.0"
   }
